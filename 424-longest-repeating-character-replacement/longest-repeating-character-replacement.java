@@ -12,7 +12,7 @@ class Solution
             char ch=s.charAt(r);
             hash[ch-'A']++;
             max_freq=Math.max(max_freq,hash[ch-'A']);
-            if((r-l+1)-max_freq>k)
+            while((r-l+1)-max_freq>k)
             {
                 hash[s.charAt(l)-'A']--;
                 l++;
